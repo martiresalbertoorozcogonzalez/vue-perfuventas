@@ -19,6 +19,11 @@
           <li class="nav-item active">
             <router-link to="/" class="nav-link">Home</router-link>
           </li>
+
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">About</router-link>
+          </li>
+
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -31,13 +36,10 @@
             >Perfumeria</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <router-link class="dropdown-item" to="/perfumesmujer">Perfumes de Mujer</router-link>
-              <router-link class="dropdown-item" enter-to-class=""="/perfumeshombre">Perfumes de Hombre</router-link>
+              <router-link class="dropdown-item" to="/perfumeshombre">Perfumes de Hombre</router-link>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Ofertas</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
