@@ -14,11 +14,12 @@
             </p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/img/botella-de-perfume.png" class="img-fluid" width="300px" />
+            <img src="/img/botellas.png" class="img-fluid" width="300px" />
           </div>
         </div>
       </div>
     </div>
+    <mini-cart></mini-cart>
   </div>
 </template>
 

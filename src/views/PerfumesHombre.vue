@@ -9,7 +9,7 @@
             <!-- <p>A continuacion te ofrecemos nuestros perfumes de mujer.</p> -->
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/img/perfumehombre.png" class="img-fluid" width="300px" />
+            <img src="/img/perfumehombre.png" class="img-fluid" width="250px" />
           </div>
         </div>
       </div>

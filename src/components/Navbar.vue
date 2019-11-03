@@ -43,21 +43,15 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
           <a
-            class="btn btn-outline-success my-2 my-sm-0"
+            class="btn btn-primary btn-outline-success btn-sm border-0 mx-2 my-2 my-sm-0"
             data-toggle="modal"
             data-target="#login"
             type="submit"
-          >Get Start</a>
+          >Login</a>
 
           <a
-            class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"
+            class="btn btn-outline-success border-0 mx-2 my-2 my-sm-0"
             data-toggle="modal"
             data-target="#miniCart"
           >
@@ -75,10 +69,12 @@
 import Login from "./Login.vue";
 export default {
   name: "Navbar",
-  props: {
-    msg: String
-  },
-  components: { Login }
+  components: { Login },
+  data() {
+    return {
+      search: null
+    };
+  }
 };
 </script>
 
