@@ -26,6 +26,7 @@
               <tr>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Category</th>
 
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -36,6 +37,7 @@
               <tr v-for="product in products">
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
+                <td>{{product.category}}</td>
 
                 <td>
                   <button class="btn btn-primary btn-sm" @click="editProduct(product)">Editar</button>
@@ -85,6 +87,15 @@
                     type="text"
                     placeholder="Product Name"
                     v-model="product.name"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Product Category"
+                    v-model="product.category"
                     class="form-control"
                   />
                 </div>
@@ -185,7 +196,8 @@ export default {
         description: null,
         price: null,
         tags: [],
-        images: []
+        images: [],
+        category:[],
       },
       activeItem: null,
       modal: null,
@@ -253,7 +265,8 @@ export default {
         description: null,
         price: null,
         tags: [],
-        images: []
+        images: [],
+        category:[]
       };
     },
 

@@ -1,8 +1,8 @@
 <template>
   <div class="products" id="products">
     <div class="container">
-      <form class="form-inline my-2 my-lg-0 ml-5">
-        <h3 class="p-5">Que perfume estas bucando?</h3>
+      <form class="form-inline my-2 my-lg-0">
+        <h2 class="p-5">Que perfume de mujer buscas?</h2>
         <input
           class="form-control mr-sm-2"
           type="search"
@@ -19,7 +19,6 @@
                 <img :src="image" class="card-img-top" alt="..." />
               </slide>
             </carousel>
-
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <h5 class="card-title">{{ product.name }}</h5>
@@ -27,7 +26,7 @@
               </div>
 
               <add-to-cart
-                :image="getImage(product.images)"
+                :image="product.image"
                 :p-id="product.id"
                 :price="product.price"
                 :name="product.name"
@@ -37,13 +36,15 @@
         </div>
       </div>
     </div>
+
+    <mini-cart></mini-cart>
   </div>
 </template>
 
 <script>
 import { db } from "../firebase";
 export default {
-  name: "Products-list",
+  name: "Listarperfumesmujer",
   props: {
     msg: String
   },
@@ -59,7 +60,7 @@ export default {
   },
   firestore() {
     return {
-      products: db.collection("products")
+      products: db.collection("products").where("category", "==", "mujer")
     };
   }
 };

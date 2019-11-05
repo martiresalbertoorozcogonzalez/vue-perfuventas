@@ -17,11 +17,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link to="/" class="nav-link">Home</router-link>
+            <router-link to="/" class="nav-link">Inicio</router-link>
           </li>
 
           <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
+            <router-link to="/about" class="nav-link">Acerca de</router-link>
           </li>
 
           <li class="nav-item dropdown">
@@ -48,7 +48,7 @@
             data-toggle="modal"
             data-target="#login"
             type="submit"
-          >Login</a>
+          >Iniciar secion</a>
 
           <a
             class="btn btn-outline-success border-0 mx-2 my-2 my-sm-0"
@@ -69,12 +69,7 @@
 import Login from "./Login.vue";
 export default {
   name: "Navbar",
-  components: { Login },
-  data() {
-    return {
-      search: null
-    };
-  }
+  components: { Login }
 };
 </script>
 

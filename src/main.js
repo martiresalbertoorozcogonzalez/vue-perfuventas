@@ -42,6 +42,14 @@ Vue.component("mini-cart", require("./components/MiniCart.vue").default);
 Vue.component("products-list", require("./sections/ProductList.vue").default);
 Vue.component("Search", require("./components/Search.vue").default);
 Vue.component(
+  "perfumehombre",
+  require("./sections/Listarperfumeshombre.vue").default
+);
+Vue.component(
+  "perfumemujer",
+  require("./sections/Listarperfumemujer.vue").default
+);
+Vue.component(
   "LearnMoreAboutus",
   require("./sections/LearnMoreAboutus.vue").default
 );
