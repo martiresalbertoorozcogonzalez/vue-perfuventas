@@ -26,6 +26,8 @@
                 <h5 class="card-priceS">{{ product.price | currency }}</h5>
               </div>
 
+              <p>{{ product.description }}</p>
+
               <add-to-cart
                 :image="getImage(product.images)"
                 :p-id="product.id"

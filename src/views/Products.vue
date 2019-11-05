@@ -27,7 +27,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Category</th>
-
+                <th>Description</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
               </tr>
@@ -38,6 +38,7 @@
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.category}}</td>
+                <td>{{ product.description }}</td>
 
                 <td>
                   <button class="btn btn-primary btn-sm" @click="editProduct(product)">Editar</button>
@@ -101,7 +102,14 @@
                 </div>
 
                 <div class="form-group">
-                  <vue-editor v-model="product.description"></vue-editor>
+                  <textarea
+                    v-model="product.description"
+                    class="form-control"
+                    type="text"
+                    placeholder="description"
+                    name="description"
+                    rows="3"
+                  ></textarea>
                 </div>
               </div>
               <!-- product sidebar -->
@@ -176,14 +184,14 @@
 
 
 <script>
-import { VueEditor } from "vue2-editor";
+// import { VueEditor } from "vue2-editor";
 import { fb, db } from "../firebase";
 
 export default {
   name: "Products",
-  components: {
-    VueEditor
-  },
+  // components: {
+  //   VueEditor
+  // },
   props: {
     msg: String
   },
@@ -197,7 +205,7 @@ export default {
         price: null,
         tags: [],
         images: [],
-        category:[],
+        category: []
       },
       activeItem: null,
       modal: null,
@@ -266,7 +274,7 @@ export default {
         price: null,
         tags: [],
         images: [],
-        category:[]
+        category: []
       };
     },
 
